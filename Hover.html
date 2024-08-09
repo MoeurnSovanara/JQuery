@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstraplink2v5.0.min.css">
+    <title>Document</title>
+</head>
+<body class="container mt-5">
+    <img id="img" style="width: 20%; height: 60%;" src="https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340" alt="">
+    <p id="text1"></p>
+    <p id="text2"></p>
+</body>
+<script>
+    $(document).ready(function(){
+        $('#img').hover(
+            function(){
+                document.getElementById('text1').innerHTML="Hello";
+            },
+            function(){
+                document.getElementById('text2').innerHTML="Welcome to jQuery";
+            }
+        );
+    });
+</script>
+</html>

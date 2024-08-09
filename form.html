@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstraplink2v5.0.min.css">
+    <title>Register Form</title>
+</head>
+<body class="container mt-2 h-100">
+    <form action="" class="w-50 rounded m-auto bg-danger text-light p-2" style="height: 90vh;">
+        <h2 class="text-center"><u>Register form</u></h2>
+        <div action="" class="rounded bg-primary accordion-body">
+            <label for="id"><b>Name:</b></label>
+            <input type="text" id="name" class="form-control">
+            <label for="id"><b>Email:</b></label>
+            <input type="text" id="email" class="form-control">
+            <label for="id"><b>Password:</b></label>
+            <input type="text" id="password" class="form-control">
+            <label for="id"><b>Phone Number:</b></label>
+            <input type="text" id="phone" class="form-control">
+            <br>
+            <input class="btn btn-warning text-light" id="add" type="button" value="Add">
+            <input class="btn btn-success text-light" id="clear" type="button" value="Clear">
+        </div>
+        <table class="table mt-3 bg-light">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Phone </th>
+            </tr>
+            
+                <tbody id="row"></tbody>
+            
+        </table>
+    </form>
+</body>
+<script>
+    $(document).ready(function(){
+        var i;
+        var table1="";
+        $('#add').click(function(){
+            var Name=$('#name').val();
+            var Email=$('#email').val();
+            var Password=$('#password').val();
+            var Phone=$('#phone').val();
+            if(i==1){
+                table1 +=`
+                    <tr>
+                        <td>${Name}</td>
+                        <td>${Email}</td>
+                        <td>${Password}</td>
+                        <td>${Phone}</td>
+                    </tr>
+                `;
+                i=0;
+            }else{
+                table1 +=`
+                    <tr>
+                        <td>${Name}</td>
+                        <td>${Email}</td>
+                        <td>${Password}</td>
+                        <td>${Phone}</td>
+                    </tr>
+                `;
+                i=1;
+            }
+            $('#row').html(table1);
+        });
+        $('#clear').click(function(){
+            $('#name').val('');
+            $('#email').val('');
+            $('#password').val('');
+            $('#phone').val('');
+        });
+    });
+</script>
+</html>

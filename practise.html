@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstraplink2v5.0.min.css">
+    <title>Document</title>
+</head>
+<body class="container mt-5">
+    <div class="box m-auto" style="width: 500px; height: 600px; background-color: blue;">
+        <button id="Account" class="btn btn-danger mt-2 mx-3">1.Account</button>
+        <button id="profile" class="btn btn-success mt-2 mx-3">2.Profile</button>
+        <button id="warning" class="btn btn-warning mt-2 mx-3">3.Warning</button>
+        <button id="finish" class="btn btn-secondary mt-2 mx-3">4.Finish</button>
+        <div class="boxchild1 mt-2" style="width: 50px; height: 50px; background-color:yellow;"></div>
+        <div class="boxchild2 mt-2" style="width: 50px; height: 50px; background-color:yellow;"></div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#Account").click(function(){
+            $(".boxchild1").slideToggle(1000);
+        })
+        $("#profile").click(function(){
+            $(".boxchild2").slideToggle(1000);
+        })
+    })
+</script>
+</html>

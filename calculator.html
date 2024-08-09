@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstraplink2v5.0.min.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container w-50 bg-warning p-3 mt-5" style="border-radius: 20px;">
+        <form>
+            <label for="id"><b>Value X:</b></label>
+            <input type="text" id="text1" class="form-control">
+            <label for="id"><b>Value Y:</b></label>
+            <input type="text" id="text2" class="form-control">
+            <br>
+            <input class="btn btn-danger" id="sum" style="width: 60px;" type="button" value="+">
+            <input class="btn btn-danger" id="sub" style="width: 60px;" type="button" value="-">
+            <input class="btn btn-danger" id="mul" style="width: 60px;" type="button" value="*">
+            <input class="btn btn-danger" id="div" style="width: 60px;" type="button" value="/">
+            <input class="btn btn-danger" id="modulus" style="width: 60px;" type="button" value="%">
+            <input class="btn btn-success" id="clear" style="width: 70px;" type="button" value="Clear">
+            <br>
+            <label for="id"><b>Result:</b></label>
+            <input type="text" id="text3" class="form-control">
+        </form>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $('#sum').click(function(){
+            let t1=parseFloat($('#text1').val()) || 0;
+            let t2=parseFloat($('#text2').val()) || 0;
+            $('#text3').val(t1+t2);
+        });
+        $('#sub').click(function(){
+            let t1=parseFloat($('#text1').val()) || 0;
+            let t2=parseFloat($('#text2').val()) || 0;
+            $('#text3').val(t1-t2);
+        });
+        $('#mul').click(function(){
+            let t1=parseFloat($('#text1').val()) || 0;
+            let t2=parseFloat($('#text2').val()) || 0;
+            $('#text3').val(t1*t2);
+        });
+        $('#div').click(function(){
+            let t1=parseFloat($('#text1').val()) || 0;
+            let t2=parseFloat($('#text2').val()) || 0;
+            $('#text3').val(t1/t2);
+        });
+        $('#modulus').click(function(){
+            let t1=parseFloat($('#text1').val()) || 0;
+            let t2=parseFloat($('#text2').val()) || 0;
+            $('#text3').val(t1%t2);
+        });
+        $('#clear').click(function(){
+            $('#text1').val('');
+            $('#text2').val('');
+            $('#text3').val('');
+        });
+    })
+</script>
+</html>

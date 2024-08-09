@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstraplink2v5.0.min.css">
+    <title>Document</title>
+</head>
+<body class="container mt-3">
+    <button class="btn btn-danger">Start Animation</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laborum quis quam excepturi rem suscipit.</p>
+    <div style="background:black;height: 150px;width: 150px;position: absolute;"></div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("div").animate({
+                left: "250px",
+                width: "250px",
+                height: "250px",
+                opacity: 0.5
+            })
+        })
+        $('p').css("color","greenyellow");
+    })
+</script>
+</html>

@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstraplink2v5.0.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atribute</title>
+</head>
+<style>
+    img{
+        width: 300px;
+        height: 300px;
+    }
+</style>
+<body>
+    <div class="box">
+        <img class="img" src="p1.jpg" data-img1="p1.jpg" data-img2="p3.jpeg" alt="">
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $(".img").mouseover(function(){
+            var eThis=$(this);
+            var img2=eThis.data('img2');
+            eThis.attr('src',img2)
+        })
+        $(".img").mouseout(function(){
+            var eThis=$(this);
+            var img1=eThis.data('img1');
+            eThis.attr('src',img1)
+        })
+    });
+</script>
+</html>
